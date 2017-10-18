@@ -17,5 +17,12 @@ public class SumTest {
 		assertEquals(10, result);
 		System.out.println("Result : " + result);
 	}
+	
+	@Test
+	public void testSumNegativeNum() {
+		int result = Sum.add(-5,3);
+		assertEquals(-2, result);
+		System.out.println("Result : " + result);
+	}
 
 }
