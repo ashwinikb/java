@@ -4,9 +4,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
-/**
- * @author Ashwini KB
- */
 public class BubbleSort {
 
 	public static List<Integer> sort(List<Integer> data) {

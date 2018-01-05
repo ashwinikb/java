@@ -7,9 +7,6 @@ import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Test;
 
-/**
- * @author Ashwini KB
- */
 
 public class BubbleSortTest {
 

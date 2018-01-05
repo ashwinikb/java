@@ -8,7 +8,6 @@ import java.util.Collections;
  * zero. If there are two equally close to zero elements like 2 and -2 -
  * consider the positive element to be "closer" to zero.
  * 
- * @author Ashwini KB
  * 
  */
 
