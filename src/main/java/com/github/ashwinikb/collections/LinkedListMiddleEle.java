@@ -20,6 +20,7 @@ public class LinkedListMiddleEle {
 		list.addElement(new Node(1));
 		list.addElement(new Node(2));
 		
+		
 		list.printList();
 		
 		Node middle = list.findElemnt(head);
