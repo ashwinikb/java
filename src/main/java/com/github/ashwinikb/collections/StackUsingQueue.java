@@ -1,15 +1,8 @@
-/**
- * 
- */
 package com.github.ashwinikb.collections;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * @author ashwini
- *
- */
 public class StackUsingQueue {
 
 	Queue<Integer> queue1;
@@ -21,26 +14,27 @@ public class StackUsingQueue {
 	}
 
 	public void push(int v) {
-		if(queue1.size() == 0) {
+		if (queue1.size() == 0) {
 			queue1.add(v);
-	}else {
-		int sizeOfQueue1 = queue1.size();
-		//copy elements from queue1 to queue2.
-		for(int i = 0; i < sizeOfQueue1; i++)
-			queue2.add(queue1.remove());
-		queue1.add(v);
-		
-		//copy back elements from queue2 to queue1.
-		for(int j = 0; j < sizeOfQueue1; j++)
-			queue1.add(queue2.remove());
+		} else {
+			int sizeOfQueue1 = queue1.size();
+			// copy elements from queue1 to queue2.
+			for (int i = 0; i < sizeOfQueue1; i++)
+				queue2.add(queue1.remove());
+			queue1.add(v);
+
+			// copy back elements from queue2 to queue1.
+			for (int j = 0; j < sizeOfQueue1; j++)
+				queue1.add(queue2.remove());
 		}
 	}
 
 	public int pop() {
-		if(queue1.size() == 0) throw new QueueEmptyException("UnderFlow Exception");
+		if (queue1.size() == 0)
+			throw new QueueEmptyException("UnderFlow Exception");
 		return queue1.remove();
 	}
-	
+
 	public static void main(String[] args) {
 		StackUsingQueue stack = new StackUsingQueue();
 		stack.push(20);
@@ -50,23 +44,20 @@ public class StackUsingQueue {
 		stack.push(90);
 		stack.push(110);
 		stack.push(30);
-		System.out.println("Removed element : "+ stack.pop());
+		System.out.println("Removed element : " + stack.pop());
 		stack.push(170);
-		System.out.println("Removed element : "+ stack.pop());
+		System.out.println("Removed element : " + stack.pop());
 	}
 }
 
-	class QueueEmptyException extends RuntimeException {
-		private static final long serialVersionUID = 1L;
-	 
-		public QueueEmptyException() {
-			super();
-		}
-	 
-		public QueueEmptyException(String message) {
-			super(message);
-		}
+class QueueEmptyException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
+
+	public QueueEmptyException() {
+		super();
 	}
-	 
 
-
+	public QueueEmptyException(String message) {
+		super(message);
+	}
+}

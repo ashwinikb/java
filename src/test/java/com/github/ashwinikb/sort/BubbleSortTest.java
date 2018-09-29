@@ -7,7 +7,6 @@ import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Test;
 
-
 public class BubbleSortTest {
 
 	@Test
@@ -26,17 +25,16 @@ public class BubbleSortTest {
 
 	}
 
-	
 	@Test
 	public void testBubbleSortJava8Approach() {
-	    Integer[] array = { 2, 1, 4, 6, 3, 5 };
-	    Integer[] sortedArray = { 1, 2, 3, 4, 5, 6 };
-	    BubbleSort bubbleSort = new BubbleSort();
-	    bubbleSort.bubbleSortJava8Approach(array);
-	     
-	    assertArrayEquals(array, sortedArray);
+		Integer[] array = { 2, 1, 4, 6, 3, 5 };
+		Integer[] sortedArray = { 1, 2, 3, 4, 5, 6 };
+		BubbleSort bubbleSort = new BubbleSort();
+		bubbleSort.bubbleSortJava8Approach(array);
+
+		assertArrayEquals(array, sortedArray);
 		Arrays.stream(sortedArray).forEach(System.out::print);
 
 	}
-	
+
 }

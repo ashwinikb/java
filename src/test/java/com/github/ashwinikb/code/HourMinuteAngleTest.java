@@ -13,13 +13,13 @@ import org.junit.Test;
  *
  */
 public class HourMinuteAngleTest {
-	
+
 	@Test
 	public void test() {
 		double h = 4;
 		double m = 30;
 		int result = HourMinuteAngle.angle(h, m);
-		assertEquals(result,45);
+		assertEquals(result, 45);
 		System.out.println(result);
 	}
 

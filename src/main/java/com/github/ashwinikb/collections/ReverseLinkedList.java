@@ -1,19 +1,14 @@
-/**
- * 
- */
-/**
- * @author ashwini
- *
- */
+package com.github.ashwinikb.collections;
+
 public class ReverseLinkedList {
 	// Without using LinkedList interface.
-		private static Node head;
-	
+	private static Node head;
+
 	private static class Node {
 		private int value;
 		private Node next;
 
-		 Node(int value) {
+		Node(int value) {
 			this.value = value;
 		}
 	}
@@ -37,19 +32,17 @@ public class ReverseLinkedList {
 		}
 	}
 
-	public static Node reverseLinkedList(Node currentNode){
-		Node previousNode=null;
+	public static Node reverseLinkedList(Node currentNode) {
+		Node previousNode = null;
 		Node nextNode;
-		while(currentNode!=null){
-			nextNode=currentNode.next;
-			currentNode.next=previousNode;
-			previousNode=currentNode;
-			currentNode=nextNode;
+		while (currentNode != null) {
+			nextNode = currentNode.next;
+			currentNode.next = previousNode;
+			previousNode = currentNode;
+			currentNode = nextNode;
 		}
 		return previousNode;
 
 	}
 
-	}
-
-
+}

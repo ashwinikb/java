@@ -1,12 +1,5 @@
-/**
- * 
- */
 package com.github.ashwinikb.collections;
 
-/**
- * @author ashwini
- *
- */
 public class StackArray {
 	int size;
 	int arr[];
@@ -38,6 +31,7 @@ public class StackArray {
 			return -1;
 		}
 	}
+
 	public int peek() {
 		return arr[top];
 	}
@@ -49,6 +43,7 @@ public class StackArray {
 	private boolean isFull() {
 		return (size - 1) == top;
 	}
+
 	public static void main(String[] args) {
 		StackArray StackCustom = new StackArray(10);
 		StackCustom.pop();

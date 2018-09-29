@@ -1,14 +1,5 @@
-/**
- * 
- */
 package com.github.ashwinikb.collections;
 
-import linkedlist.Node;
-
-/**
- * @author ashwini
- *
- */
 public class StackLinkedList {
 	private Node head;
 
@@ -29,27 +20,28 @@ public class StackLinkedList {
 		head = head.next;
 		return value;
 	}
-	
+
 	public void push(int value) {
 		Node oldHead = head;
 		head = new Node();
 		head.value = value;
 		head.next = oldHead;
 	}
-	public static void main(String args[]) 
-	{
-		StackLinkedList list =new StackLinkedList();
+
+	public static void main(String args[]) {
+		StackLinkedList list = new StackLinkedList();
 		list.push(20);
 		list.push(50);
 		list.push(80);
 		list.push(40);
 		list.push(60);
 		list.push(75);
-		System.out.println("Element removed from LinkedList: "+list.pop());
-		System.out.println("Element removed from LinkedList: "+list.pop());
-		System.out.println("Element removed from LinkedList: "+list.pop());
+		System.out.println("Element removed from LinkedList: " + list.pop());
+		System.out.println("Element removed from LinkedList: " + list.pop());
+		System.out.println("Element removed from LinkedList: " + list.pop());
 		printList(list.head);
 	}
+
 	public static void printList(Node head) {
 		Node temp = head;
 		while (temp != null) {

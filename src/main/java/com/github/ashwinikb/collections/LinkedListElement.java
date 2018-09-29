@@ -3,10 +3,6 @@
  */
 package com.github.ashwinikb.collections;
 
-/**
- * @author ashwini
- *
- */
 public class LinkedListElement {
 	private static Node head;
 

@@ -3,10 +3,6 @@ package com.github.ashwinikb.collections;
 
 import java.util.LinkedList;
 
-/**
- * @author ashwini
- *
- */
 public class LinkedListMiddleEle {
 	// Without using LinkedList interface.
 		private static Node head;
