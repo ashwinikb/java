@@ -1,40 +1,20 @@
-package com.github.ashwinikb.sort;
+package com.ashwinikb.sortingtest;
 
-import java.util.Arrays;
-import java.util.List;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
 
+import org.junit.Assert;
 import org.junit.Test;
 
+import com.ashwinikb.sorting.BubbleSort;
+
 public class BubbleSortTest {
-
+	
 	@Test
-	public void test() {
-
-		List<Integer> result = BubbleSort.sort(Arrays.asList(10, 1, 5, 9, 4));
-		List<Integer> expetced = Arrays.asList(1, 4, 5, 9, 10);
-
-		// Expected Equals
-		assertThat(result, is(expetced));
-
-		// Expected Not-Equals
-		assertThat(result, is(not(Arrays.asList(10, 1, 5, 9, 4))));
-
-		System.out.println("Result :" + result);
-
-	}
-
-	@Test
-	public void testBubbleSortJava8Approach() {
-		Integer[] array = { 2, 1, 4, 6, 3, 5 };
-		Integer[] sortedArray = { 1, 2, 3, 4, 5, 6 };
-		BubbleSort bubbleSort = new BubbleSort();
-		bubbleSort.bubbleSortJava8Approach(array);
-
-		assertArrayEquals(array, sortedArray);
-		Arrays.stream(sortedArray).forEach(System.out::print);
-
+	public void bubbleTest1() {
+		int[] array = {100,20,15,30,5,75,40};
+		int[] result = BubbleSort.array(array);
+		int[] expected = {5,15,20,30,40,75,100};
+		Assert.assertArrayEquals(expected, result);
+		
 	}
 
 }
