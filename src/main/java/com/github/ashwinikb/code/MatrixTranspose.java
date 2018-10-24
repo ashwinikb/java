@@ -1,17 +1,12 @@
+package com.example.ashwinikb;
 
-package com.github.ashwinikb.code;
-
-/**
- * @author ashwini
- *
- */
-public class MatrixTranspose {
+public class Matrixtranspose {
 	public static void main(String[] args) {
 		int[][] array = {{1,2,3,4},{4,5,6,7},{8,9,10,11},{12,13,14,15}};
 		int N = 4;
 		int[][] transposeArray = new int[N][N];
 		int i,j;
-		MatrixTranspose.transpose(array,transposeArray);
+		Matrixtranspose.transpose(array,transposeArray);
 		System.out.print("Result matrix is \n");
         for (i = 0; i < N; i++)
         {
@@ -24,7 +19,7 @@ public class MatrixTranspose {
         int P = array1[0].length;
         int Q = array1.length;
 		int m,n;
-		double[][] B = MatrixTranspose.transposeMatrix(array1);
+		double[][] B = Matrixtranspose.transposeMatrix(array1);
 		System.out.print("Result matrix is \n");
         for (m = 0; m < P; m++)
         {
@@ -33,7 +28,7 @@ public class MatrixTranspose {
             System.out.print("\n");
         }
 	}
-	public static void transpose(int[][] A, 	int[][] B) {
+	public static void transpose(int[][] A, int[][] B) {
 		int N = A.length;
 		for(int i=0;i<N;i++) {
 			for(int j =0;j<N;j++) {
@@ -55,4 +50,5 @@ public class MatrixTranspose {
 
 	    return ret;
 	}
+
 }
