@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class PostOrder {
-	public List<Integer> preorderTraversal(TreeNode root) {
+	public List<Integer> postOrderTraversal(TreeNode root) {
         
         List<Integer> list = new LinkedList<Integer>();
 		if(root==null) return list;
